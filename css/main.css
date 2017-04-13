@@ -1,0 +1,25 @@
+/*default*/
+body{
+    overflow: hidden;
+}
+.fullpage{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.fullpage >section{
+    height: 800px;
+    color: #fff;
+    background-color: #c2ff98;
+}
+.fullpage>section:nth-child(even){
+    background-color: #ffa38c;
+}
+.fullpage .fp_section{
+    width: 100vw;
+    background-color: #6744cc;
+    height: 100vh;
+}
+
+/*default and*/
