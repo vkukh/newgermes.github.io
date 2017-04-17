@@ -7,17 +7,22 @@ let plugins = [
 
 module.exports = {
     devtool: 'source-map',
-    entry: './js/main',
+    entry: './src/js/main',
     plugins: plugins,
     module: {
         loaders: [{
             test: /\.js$/,
             loaders: ['babel-loader'],
             exclude: '/node_modules/'
+        },
+        {
+            test: /\.css$/,
+            exclude: '/node_modules/',
+            loader: 'style-loader!css-loader'
         }]
     },
     output: {
-        path: path.resolve(__dirname, 'js/dist'),
+        path: path.resolve(__dirname, '/dist'),
         filename: 'bundle.js'
     }
 };

@@ -1,3 +1,10 @@
+/**
+ * Mouse wheel handler
+ * @param {*} wrapper 
+ * @param {Promise} callback 
+ * @param {down: {element, to, duration, activeAnimation}, up: {element, to, duration, activeAnimation}} settings 
+ */
+
 export default function(wrapper, callback, settings) {
     // left: 37, up: 38, right: 39, down: 40,
     // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
@@ -38,8 +45,9 @@ export default function(wrapper, callback, settings) {
         }
 
         if (delta > 0 && settings.up.activeAnimation) {
+            document.body.style.overflowY = 'hidden';
+            
             callback(settings.up).then((val) => {
-                document.body.style.overflowY = 'hidden';
                 settings.up.activeAnimation = false;
                 settings.down.activeAnimation = true;
 
