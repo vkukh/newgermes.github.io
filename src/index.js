@@ -16,7 +16,7 @@ Vue.http.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('acc
 // Check the user's auth status when the app starts
 auth.checkAuth()
 
-let lock = new Auth0Lock('cQeH3bOPfBY5KgEAbi1OYInZp_DCnbQK', 'newgermes.auth0.com')
+// let lock = new Auth0Lock('cQeH3bOPfBY5KgEAbi1OYInZp_DCnbQK', 'newgermes.auth0.com')
 
 let routes = [
       {path: '/home', component: Home},
@@ -36,4 +36,4 @@ const app = new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-export {router, lock};
+export {router};
