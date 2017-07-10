@@ -1,5 +1,6 @@
 import {router} from '../index'
 import Vue from 'vue'
+import jwt_decode from 'jwt-decode'
 
 const API_URL = 'http://localhost:3001/'
 const LOGIN_URL = API_URL + 'sessions/create/'
@@ -75,5 +76,11 @@ export default {
     return {
       Authorization: 'Bearer ' + localStorage.getItem('access_token')
     }
+  },
+
+  getUserName() {
+    let jwt = localStorage.getItem('id_token')
+    
+    return jwt ? jwt_decode(jwt).username : ''
   }
 }
