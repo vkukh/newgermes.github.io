@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "auth0-js": "^8.8.0",
+    "auth0-lock": "^10.18.0",
     "bootstrap": "^3.3.5",
     "jwt-decode": "^2.2.0",
     "vue": "*",

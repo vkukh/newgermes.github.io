@@ -10,11 +10,16 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 Vue.use(VueRouter)
 import auth from './auth'
+import AUTH0_VARIABLES from './auth/AUTH0_VARIABLES'
+import Auth0Lock from 'auth0-lock'
 
 Vue.http.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('access_token');
 
 // Check the user's auth status when the app starts
 auth.checkAuth()
+
+let auth0_variables = new AUTH0_VARIABLES;
+let lock = new Auth0Lock(auth0_variables.client_id, auth0_variables.domain)
 
 let routes = [
       {path: '/home', component: Home},
@@ -34,4 +39,4 @@ const app = new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-export {router};
+export {router, lock};

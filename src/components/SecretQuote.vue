@@ -4,9 +4,14 @@
         <div class="alert alert-danger" v-if="error">
       <p>{{ error }}</p>
     </div>
-    <button class="btn btn-warning" v-on:click="getQuote()">Get a Quote</button>
-    <div class="quote-area" v-if="quote">
-      <h2><blockquote>{{ quote }}</blockquote></h2>      
+    <div v-if="canActivate()">
+      <button class="btn btn-warning" v-on:click="getQuote()">Get a Quote</button>
+      <div class="quote-area">
+        <h2><blockquote>{{ quote }}</blockquote></h2>      
+      </div>
+    </div>
+    <div v-else class="alert alert-danger">
+      <p>Вам нужно зарегистрироваться для просмотра данного контента!</p>  
     </div>
   </div>
 </template>
@@ -30,12 +35,11 @@ export default {
               }, err => {
                 this.error = err.statusText;
         })
+    },
+
+    canActivate() {
+      return auth.user.authenticated
     }
-  },
-  // route: {
-  //   canActivate() {
-  //     return auth.user.authenticated
-  //   }
-  // }
+  }
 }
 </script>
