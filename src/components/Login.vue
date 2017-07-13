@@ -27,7 +27,6 @@
 
 <script>
 import auth from '../auth'
-import AuthService from '../auth/AuthService'
 
 export default {
   data() {
@@ -45,9 +44,8 @@ export default {
         username: this.credentials.username,
         password: this.credentials.password
       }
-      // auth.login(this, credentials, 'secretquote')
-      let authService = new AuthService;
-      authService.login()
+      
+      auth.login(this, credentials, 'secretquote')
     }
   }
   
