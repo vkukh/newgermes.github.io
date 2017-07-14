@@ -9,7 +9,6 @@
         <ul class="nav navbar-nav navbar-right">
           <li v-if="!user.authenticated"><router-link to="/signup" class="glyphicon glyphicon-user">Sign Up</router-link></li>
           <li v-if="!user.authenticated"><router-link to="/login" class="glyphicon glyphicon-log-in">Login</router-link></li>
-          <li><router-link @click.native='login()' to="" class="glyphicon glyphicon-log-in">Auth0</router-link></li>
 
           <p v-if="user.authenticated" class="navbar-text glyphicon glyphicon-user">{{ username }}</p>
           <li v-if="user.authenticated"><router-link to="/login" @click.native="logout()" class="glyphicon glyphicon-log-out">Logout</router-link></li>
@@ -25,7 +24,6 @@
 
 <script>
 import auth from '../auth'
-import {lock} from '../index'
 
 export default {
   data() {
@@ -34,17 +32,9 @@ export default {
       username: auth.getUserName()
     }
   },
-  methods: {
+    methods: {
     logout() {
       auth.logout()
-    },
-    login() {
-      lock.show((err, profile, id_token) => {
-
-        localStorage.setItem('profile', JSON.stringify(profile))
-        localStorage.setItem('id_token', id_token)
-
-      })
     }
   },
   watch: {
