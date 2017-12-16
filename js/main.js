@@ -11,7 +11,7 @@
                 label: "braindislab.com",
                 backgroundColor: '#1e926b',
                 borderColor: '#04245d',
-                data: [2, 4, 5, 28, 83, 117, 171, 228, 318, 353, 377],
+                data: [2, 4, 28, 83, 117, 171, 228, 318, 353, 377],
                 fill: false
             }]
         },
