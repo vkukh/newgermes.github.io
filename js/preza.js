@@ -19,7 +19,7 @@
             re = newTraffic * 22500 / etalon - 22500;
             sum += re;
     
-            res += `<p><b>Месяц ${month}:</b> ${newTraffic.toFixed(0)} пользователей; <b>Месячная прибыль:</b> ${re.toFixed(0)} $; <b>Чистая прибыль:</b> ${sum.toFixed(0)} $</p>`;
+            res += `<p><b>Месяц ${month}:</b> ${newTraffic.toFixed(0)} пользователей; <b>Месячная прибыль:</b> ${re.toFixed(0)} $; <b>Чистая суммарная прибыль:</b> ${sum.toFixed(0)} $</p>`;
             // console.log(`Месяц ${month}: ${newTraffic.toFixed(0)} пользователей; Месячная прибыль: ${re.toFixed(0)} $; Суммарная прибыль: ${sum.toFixed(0)} $`);
             month++;
         }
