@@ -1,0 +1,361 @@
+.left_line_50 {
+    width: 100%;
+    top: -24px;
+    height: 2px;
+    position: relative;
+}
+.left_line_50.bottom {
+    top: 10px;
+}
+.left_line_50::before {
+    content: "";
+    right: 50%;
+    top: 15px;
+    width: 50%;
+    display: block;
+    position: absolute;
+    height: 2px;
+    background-color: #eee;
+}
+.left_line_50.bottom::before {
+    left: 0;
+    right: auto;
+}
+.third_nesting .container {
+    padding-top: 15px;
+}
+.left_line_50 > .circle_line {
+    left: -7px;
+}
+.body_extended {
+    width: 100%;
+    position: relative;
+    top: -10px;
+    padding: 25px 0;
+}
+.body_extended::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: #eee;
+}
+.third_nesting .see_block .title_page + .line_cont {
+    margin-top: 10px;
+}
+.top_list {
+    display: inline-flex;
+}
+.top_list:hover .title_list {
+    margin-left: 20px;
+    color: #000;
+}
+.active .top_list:hover .title_list {
+    margin-left: 0;
+}
+.top_list .circle_line {
+    left: -7px;
+}
+.left_t_circle {
+    position: relative;
+    width: 80px;
+}
+.left_l_circle {
+    position: relative;
+    width: 50px;
+}
+.left_l_circle::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: #eee;
+    left: 0;
+    top: 15px;
+}
+.left_t_circle::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 2px;
+    background-color: #eee;
+    display: block;
+    top: 15px;
+    transition: .4s;
+}
+.left_t_circle::after {
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    display: inline-block;
+    font-weight: 500;
+    color: #797979;
+    border: 1px solid #dad7d7;
+    top: 7px;
+    position: absolute;
+    right: 0;
+    background-color: #eee;
+    cursor: pointer;
+    z-index: 2;
+}
+.left_t_circle::after {
+    content: "+";
+}
+.wrap_list.active .left_t_circle::after {
+    content: "-";
+}
+.bottom_line {
+    top: -17px;
+}
+.wrap_list {
+    padding: 25px 0;
+}
+.title_list {
+    cursor: pointer;
+    padding: 5px 0 0 10px;
+    font: 500 18px/20px "Roboto", sans-serif;
+}
+.list_link {
+    position: relative;
+    margin: -5px 0 0 63px;
+    overflow: hidden;
+    display: block;
+    height: 0;
+    transition: height .4s;
+}
+.wrap_list.active .list_link {
+    height: auto;
+}
+.wrap_list .list_link circle {
+    stroke-dashoffset: 180 !important;
+    fill: transparent !important;
+}
+.wrap_list .list_link::before {
+    height: 0;
+}
+.wrap_list.active .list_link::before {
+    transition: height .6s .2s;
+    height: calc(100% - 10px);
+}
+list.active .left_l_circle .circle_line circle:last-child {
+    transition: .4s 1.2s;
+    fill: #eee;
+}
+.wrap_list.active .circle_line circle {
+    transition: .4s .8s;
+    fill: #fff !important;
+    stroke-dashoffset: 0 !important;
+}
+.wrap_list.active .left_l_circle::before {
+    transition: width .4s 1.2s;
+    width: 100%;
+}
+.list_link a {
+    opacity: 0;
+    padding-left: 0;
+    display: inline-block;
+    position: relative;
+    color: #9a9a9a;
+    font: 400 17px/20px "Roboto", sans-serif;
+}
+.list_link .link_video::before{
+    content: "";
+    display: block;
+    width: 10px;
+    position: absolute;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E62117;
+    right: -13px;
+    top: 0;
+    z-index: 1;
+}
+.list_link .link_video::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -12px;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-left: 6px solid #fff;
+    border-bottom: 3px solid transparent;
+}
+
+.list_link a:hover {
+    color: #ffea00;
+}
+.wrap_list.active .list_link a {
+    transition: opacity .4s 1.5s, padding-left .4s 1.5s, color .5s;
+    opacity: 1;
+    padding-left: 15px;
+}
+.list_link li {
+    display: flex;
+    padding-top: 25px;
+    align-items: center;
+}
+.list_link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 7px;
+    width: 2px;
+    background-color: #eee;
+    display: block;
+}
+.wrap_bl_circle .btn_sol {
+    margin-bottom: 20px;
+}
+.container.feedback {
+    padding-top: 0;
+}
+/*BEGIN animations*/
+.third_nesting .line_cont .circle_line circle,
+.third_nesting .left_line_50 .circle_line circle,
+.top_list .circle_line circle ,
+[class*="_third"] circle{
+    transition: .4s;
+    stroke-dashoffset: 180;
+}
+.third_nesting .line_cont .circle_line circle:last-child,
+.third_nesting .left_line_50 .circle_line circle:last-child,
+.top_list .circle_line circle {
+    fill: transparent;
+}
+.third_nesting .line_cont:first-child .circle_line:first-child circle,
+.third_nesting .line_cont:first-child .circle_line:first-child circle:last-child,
+[class*="_third"] .line_cont:first-child .circle_line:first-child circle,
+[class*="_third"] .line_cont:first-child .circle_line:first-child circle:last-child{
+    transition-delay: .8s;
+}
+.third_nesting .line_cont:first-child .line_vertic:before {
+    transition: .4s;
+    transition-delay: 1.2s;
+}
+.third_nesting .line_cont:first-child .circle_line:last-child circle,
+.third_nesting .line_cont:first-child .circle_line:last-child circle:last-child,
+[class*="_third"] .line_cont:first-child .circle_line:last-child circle,
+[class*="_third"] .line_cont:first-child .circle_line:last-child circle:last-child{
+    transition-delay: 1.6s;
+}
+.third_nesting .title_page + .line_cont .circle_line:first-child circle,
+.third_nesting .title_page + .line_cont .circle_line:first-child circle:last-child,
+[class*="_third"] .title_page + .line_cont .circle_line:first-child circle,
+[class*="_third"] .title_page + .line_cont .circle_line:first-child circle:last-child{
+    transition-delay: 2s;
+}
+.third_nesting .line_cont .line_vertic:before,
+[class*="_third"] .title_page + .line_cont .line_vertic:before{
+    height: 0;
+    transition: height .4s 2.3s;
+}
+[class*="_third"] .line_cont .line_vertic:before{
+    height: 0;
+    transition: .4s height 1.2s;
+}
+.third_nesting .line_cont .circle_line:last-child circle,
+.third_nesting .line_cont .circle_line:last-child circle:last-child,
+[class*="_third"] .line_cont .circle_line:last-child circle,
+[class*="_third"] .line_cont .circle_line:last-child circle:last-child {
+    transition-delay: 2.6s;
+}
+.third_nesting .left_line_50::before,
+[class*="_third"] .left_line_50::before{
+    width: 0;
+    transition:width .4s 2.7s;
+}
+.third_nesting .left_line_50 .circle_line circle,
+.third_nesting .left_line_50 .circle_line circle:last-child,
+[class*="_third"] .left_line_50 .circle_line circle,
+[class*="_third"] .left_line_50 .circle_line circle:last-child {
+    transition-delay: 3.1s;
+}
+.body_extended:before {
+    height: 0;
+    transition: height .5s 3.5s;
+}
+.third_nesting .left_line_50.bottom .circle_line circle,
+.third_nesting .left_line_50.bottom .circle_line circle:last-child,
+[class*="_third"] .left_line_50.bottom .circle_line circle,
+[class*="_third"] .left_line_50.bottom .circle_line circle:last-child {
+    transition-delay: 4s;
+}
+.third_nesting .left_line_50.bottom::before,
+[class*="_third"] .left_line_50.bottom::before{
+    transition-delay: 4.4s;
+}
+.top_list .circle_line circle,
+.top_list .circle_line circle:last-child,
+.see_block .top_list .circle_line circle:first-child,
+.third_nesting .bottom_line .circle_line:first-child circle,
+.third_nesting .bottom_line .circle_line:first-child circle:last-child,
+[class*="_third"] .bottom_line .circle_line:first-child circle,
+[class*="_third"] .bottom_line .circle_line:first-child circle:last-child{
+    transition-delay: 4.8s;
+}
+.top_list .left_t_circle::before,
+.third_nesting .bottom_line .line_vertic::before,
+[class*="_third"] .bottom_line .line_vertic::before{
+    transition-delay: 5.1s;
+}
+.third_nesting .bottom_line .circle_line:last-child circle,
+.third_nesting .bottom_line .circle_line:last-child circle:last-child,
+[class*="_third"] .bottom_line .circle_line:last-child circle,
+[class*="_third"] .bottom_line .circle_line:last-child circle:last-child {
+    transition-delay: 5.5s;
+}
+.top_list .left_t_circle::after,
+.third_nesting .btn_sol,
+[class*="_third"] .btn_sol{
+    opacity: 0;
+    transition: opacity .5s 5.8s, box-shadow .4s;
+}
+.body_extended .title_list {
+    opacity: 0;
+    transition: padding-left .6s ease-out 6.2s, opacity .6s ease-out 6.2s, margin .3s;
+    padding-left: 60px;
+}
+.see_block .wrap_bl_circle > .left_line_50::before,
+.see_block .left_line_50.bottom::before {
+    width: 50%;
+}
+.see_block .top_list .left_t_circle::before {
+    width: 100%;
+}
+.see_block .top_list .left_t_circle::after,
+.third_nesting .see_block .btn_sol,
+.see_block .body_extended .title_list,
+[class*="_third"].see_block .btn_sol{
+    opacity: 1;
+}
+.see_block .body_extended .title_list {
+    padding-left: 10px;
+}
+[class*="_third"].see_block .line_vertic::before,
+.third_nesting .see_block .line_vertic::before,
+[class*="_third"].see_block .title_page + .line_cont .line_vertic:before,
+.see_block .body_extended::before {
+    height: 100%;
+}
+[class*="_third"].see_block .circle_line circle,
+.third_nesting .see_block .circle_line circle{
+    stroke-dashoffset: 0;
+}
+[class*="_third"].see_block .circle_line circle:last-child,
+.third_nesting .see_block .circle_line circle:last-child {
+    fill: #eee;
+}
+[class*="_third"].see_block .circle_line circle:first-child,
+.third_nesting .see_block .circle_line circle:first-child{
+    fill: #fff;
+}
+/*AND animationas*/

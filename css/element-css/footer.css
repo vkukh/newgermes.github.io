@@ -1,0 +1,90 @@
+.main_footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    padding: 40px 30px 0;
+    background-color: #fff;
+}
+.copirate {
+    font-size: 14px;
+    color: #4b4b4b;
+    max-width: 230px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.sicial_icon {
+    display: flex;
+}
+.main_footer .logo,
+body.black .main_footer .logo{
+    fill: #4b4b4b;
+}
+.sicial_icon > a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    position: relative;
+    margin-right: 10px;
+    transition: color .3s, border .3s;
+}
+.sicial_icon > a.icon-youtub:hover {
+    color: #E62117;
+}
+.sicial_icon > a.icon-facebook:hover {
+    color: #3E5B99;
+}
+.sicial_icon > a.icon-youtub::before {
+    text-align: left;
+    font-size: 23px;
+    position: relative;
+    left: -1px;
+    top: 3px;
+}
+.sicial_icon > a.icon-facebook {
+    font-size: 20px;
+}
+.footer_email,
+.footer_phone {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 400;
+    font-size: 18px;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 30px;
+}
+.footer_email a,
+.footer_phone a {
+    color: #4a4a4a;
+    position: relative;
+    margin-right: 25px;
+    transition: color .3s;
+}
+.footer_email a:hover,
+.footer_phone a:hover {
+    color: #ffe900;
+}
+.footer_email .line_row,
+.footer_phone .line_row {
+    width: 100%;
+    max-width: 80px;
+}
+.contact_feedback {
+    display: flex;
+    align-items: center;
+    width: 65%;
+    justify-content: flex-end;
+}
+.fo_i::before {
+    position: absolute;
+    left: -55px;
+    top: -8px;
+    font-size: 36px;
+}
+.fo_i.icon-tel2::before {
+    top: -6px;
+}

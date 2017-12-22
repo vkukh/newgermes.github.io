@@ -1,0 +1,280 @@
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+}
+.portfolio .job {
+    max-width: 600px;
+    height: 350px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    flex: 1 1 400px;
+}
+.sub_portfolio .title_page {
+    margin-bottom: 25px;
+}
+.sub_portfolio .container{
+    padding-top: 20px;
+}
+.sub_portfolio.emplo_style .container {
+    width: 100%;
+    padding: 0 20px;
+}
+.sub_portfolio.emplo_style .title_page,
+.sub_portfolio.emplo_style .line_cont {
+    display: none;
+}
+.sub_portfolio.emplo_style .portfolio .job {
+    flex: 1 1 50%;
+    height: 550px;
+    max-width: 50%;
+}
+.portfolio .job:nth-child(4n+1) {
+    border-right: solid 1px #f3fc00;
+    border-bottom: solid 1px #f3fc00;
+}
+.portfolio .job:nth-child(4n+2) {
+    border-left: solid 1px #f3fc00;
+    border-bottom: solid 1px #f3fc00;
+}
+.portfolio .job:nth-child(4n+3) {
+    border-right: solid 1px #f3fc00;
+    border-top: solid 1px #f3fc00;
+}
+.portfolio .job:nth-child(4n+4) {
+    border-left: solid 1px #f3fc00;
+    border-top: solid 1px #f3fc00;
+}
+.job > img {
+    width: 100%;
+    height: auto;
+    transition: all 1s ease;
+}
+.job > video {
+    transition: all 1s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body.black .page_solution .sub_portfolio .title_page {
+    color: #fff;
+}
+.job > img {
+    animation: scrollTop 30s infinite ease;
+    animation-play-state: paused;
+}
+.see_block .job > img {
+    animation-play-state: running;
+    animation-delay: 3s;
+}
+.content_job {
+    background-color: rgba(255, 234, 0, .8);
+    position: absolute;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    overflow: hidden;
+    margin: 25px;
+    padding: 30px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    transition: .8s;
+    opacity: 0;
+    justify-content: space-between;
+}
+.portfolio .job:nth-child(4n+1) .content_job,
+.portfolio .job:nth-child(4n+2) .content_job {
+    transform: scale(0);
+    bottom: -100%;
+}
+.portfolio .job:nth-child(4n+3) .content_job,
+.portfolio .job:nth-child(4n+4) .content_job {
+    top: -100%;
+    transform: scale(0);
+}
+.portfolio .job:nth-child(4n+1):hover .content_job,
+.portfolio .job:nth-child(4n+2):hover .content_job {
+    bottom: 0;
+    transform: scale(1);
+    opacity: 1;
+}
+.portfolio .job:nth-child(4n+3):hover .content_job,
+.portfolio .job:nth-child(4n+4):hover .content_job {
+    top: 0;
+    transform: scale(1);
+    opacity: 1
+}
+.portfolio .job:nth-child(4n+1) .content_job,
+.portfolio .job:nth-child(4n+3) .content_job {
+    right: -100%;
+}
+.portfolio .job:nth-child(4n+2) .content_job,
+.portfolio .job:nth-child(4n+4) .content_job {
+    left: -100%
+}
+.portfolio .job:nth-child(4n+1):hover .content_job,
+.portfolio .job:nth-child(4n+3):hover .content_job {
+    right: 0;
+}
+.portfolio .job:nth-child(4n+2):hover .content_job,
+.portfolio .job:nth-child(4n+4):hover .content_job {
+    left: 0;
+}
+.text_job {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: calc(100% - 70px);
+    max-height: 70px;
+    overflow: hidden;
+}
+.logo_job {
+    font-size: 50px;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 20px;
+    position: relative;
+}
+.logo_job::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+    height: 2px;
+    width: 60px;
+    background-color: #000;
+}
+.content_job > a {
+    width: 55px;
+    height: 55px;
+    display: block;
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+    border: solid 1px #000;
+    color: #fff;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    font-weight: 400;
+    transition: background .4s, color .3s;;
+    background-color: #000;
+}
+.content_job > a:hover {
+    color: #000;
+    background-color: transparent;
+}
+/*BEGIN animation*/
+.sub_portfolio .line_cont circle {
+    stroke-dashoffset: 180;
+    fill: transparent;
+}
+body.black .sub_portfolio .line_cont circle:last-child {
+    fill: transparent;
+}
+body.black .sub_portfolio .circle_line circle:last-child {
+    stroke: #fff;
+}
+.sub_portfolio .line_cont .line_vertic::before {
+    height: 0;
+    transition: height .5s .8s;
+}
+.sub_portfolio .line_cont circle:last-child {
+    transition: stroke-dashoffset .4s .4s, fill .4s 1.2s;
+}
+.sub_portfolio .line_cont .circle_line:first-child circle {
+    transition: stroke-dashoffset .4s .4s, fill .4s;
+}
+.sub_portfolio .line_cont .circle_line:last-child circle,
+.sub_portfolio .line_cont circle:last-child {
+    transition: stroke-dashoffset .4s 1.2s, fill .4s 1.2s;
+}
+.sub_portfolio.see_block .line_cont .line_vertic::before {
+    height: 100%;
+}
+.sub_portfolio.see_block .line_cont .circle_line circle {
+    stroke-dashoffset: 0;
+}
+.sub_portfolio.see_block .line_cont circle:last-child {
+    fill: #eee;
+}
+.portfolio .job {
+    opacity: 0;
+    transition: opacity .4s;
+    transition-delay: 1.8s;
+}
+.portfolio .job img,
+.portfolio .job video {
+    opacity: 0;
+    transition: .4s;
+    transition-delay: 2.5s;
+}
+.see_block .portfolio .job {
+    opacity: 1;
+}
+.see_block .portfolio .job img,
+.see_block .portfolio .job video {
+    opacity: 1;
+}
+/*AND animation*/
+
+@keyframes scrollTop {
+    0% {
+        transform: translateY(0%);
+    }
+    2% {
+        transform: translateY(0%);
+    }
+    10% {
+        transform: translateY(-10%);
+    }
+    15% {
+        transform: translateY(-10%);
+    }
+    20% {
+        transform: translateY(-20%);
+    }
+    25% {
+        transform: translateY(-20%);
+    }
+    30% {
+        transform: translateY(-30%);
+    }
+    35% {
+        transform: translateY(-30%);
+    }
+    40% {
+        transform: translateY(-40%);
+    }
+    45% {
+        transform: translateY(-30%);
+    }
+    50% {
+        transform: translateY(-42%);
+    }
+    60% {
+        transform: translateY(-40%);
+    }
+    65% {
+        transform: translateY(-55%);
+    }
+    70% {
+        transform: translateY(calc(-75% + 350px));
+    }
+    80% {
+        transform: translateY(calc(-100% + 350px));
+    }
+    90% {
+        transform: translateY(calc(-100% + 350px));
+    }
+    93% {
+        transform: translateY(calc(-100% + 350px));
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

@@ -1,0 +1,474 @@
+.first_nesting > .container {
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+.header_circle {
+    position: relative;
+    display: flex;
+    width: 10%;
+    transition: width .5s;
+    margin: 30px auto 0;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.header_circle::before,
+.header_circle::after {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 0;
+    height: 2px;
+    content: "";
+    transition: width .4s;
+    background-color: #ececec;
+}
+.header_circle::before {
+    right: 50%;
+}
+.header_circle::after {
+    left: 50%;
+}
+.header_circle .btn_sol {
+    position: absolute;
+    bottom: -70px;
+    opacity: 0;
+    transition: opacity .4s 4.5s, box-shadow .4s;
+}
+.body_circle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.second_nesting .container {
+    padding-bottom: 50px;
+}
+.body_service {
+    position: relative;
+    display: flex;
+    width: 70%;
+    margin-top: -17px;
+    margin-left: 15%;
+    margin-bottom: 80px;
+    padding: 0;
+    justify-content: flex-start;
+}
+.body_service::before {
+    position: absolute;
+    top: 7px;
+    height: 2px;
+    content: "";
+    background-color: #ececec;
+}
+.body_service::after {
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    content: "";
+    background-color: #ececec;
+}
+.line_cont.first_left_con {
+    width: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.first_left_con .line_vertic {
+    height: 96%;
+    top: 2%;
+    position: absolute;
+}
+.line_cont.abso_content {
+    position: absolute;
+    bottom: -50px;
+    left: 100%;
+}
+.content_service {
+    display: flex;
+    position: relative;
+    transition: .8s;
+    transition-delay: 2s;
+    padding: 30px 20px;
+}
+.content_play img {
+    width: 100%;
+    margin: auto;
+}
+.content_play {
+    position: relative;
+    width: 100%;
+    max-width: 160px;
+    align-self: flex-start;
+}
+.content_play::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+}
+.promo .body_service::before {
+    width: 0;
+    left: -6%;
+    transition: width .4s;
+    transition-delay: 1s
+}
+.promo .border_top {
+    display: flex;
+    margin-left: 10%;
+}
+.promo .body_service::after {
+    left: 0;
+}
+.selling .body_service::before {
+    width: 0;
+    right: 50%;
+    transition: width .4s;
+    transition-delay: 1s
+}
+.selling .line_cont.abso_content {
+    left: calc(50% - 7px);
+}
+.selling .more_abs {
+    left: calc(50% - 85px);
+}
+.complex .body_service::before {
+    width: 0;
+    transition: width .4s;
+    transition-delay: 1s;
+    right: -6%;
+}
+.complex .border_top {
+    display: flex;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+.complex .first_left_con {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+}
+.complex .line_cont.abso_content {
+    left: 0;
+}
+.complex .more_abs {
+    left: -70px;
+}
+.complex .body_service::after {
+    right: 0;
+}
+.contert_s_text {
+    margin-left: 20px;
+    width: 100%;
+    font: 300 18px/28px 'Roboto', sans-serif;
+}
+.contert_s_text a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #009C00;
+}
+.more_abs {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .4s 3.1s, box-shadow .4s;
+    bottom: -125px;
+    left: calc(100% - 70px)
+}
+.bottom_solution {
+    position: relative;
+    bottom: -130px;
+}
+/**/
+.mobile_block_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobile_block_wrap .content_service {
+    flex-direction: column;
+}
+.mobile_block_wrap .content_play {
+    align-self: center;
+    margin-bottom: 30px;
+}
+.mobile_block_wrap .butto_set {
+    display: flex;
+    flex-direction: column;
+}
+.mobile_block_wrap .wrap_btn_services {
+    width: 100%;
+    display: block;
+    position: relative;
+    border-top: solid 4px #000;
+}
+.line_cont + .wrap_btn_services{
+    margin-top: 30px;
+}
+.mobile_block_wrap .wrap_btn_services:first-child{
+    margin-top: 30px;
+}
+.mobile_block_wrap .wrap_btn_services svg{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.wrap_btn_services>.btn_sol{
+    position: absolute;
+    bottom: 8%;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 5;
+    width:240px;
+    left:calc(50% - 120px);
+}
+.mobile_block_wrap .butto_set .btn_sol {
+    position: relative;
+    left: auto;
+    margin: 45px 0 0;
+    bottom: auto;
+    width: 240px;
+}
+.mobile_block_wrap .more_abs {
+    position: relative;
+    opacity: 0;
+    bottom: auto;
+    left: calc(50% - 82px);
+    align-self: center;
+    display: inline-block;
+    margin: 30px auto 30px;
+}
+.mobile_block_wrap [class*='sp_'],
+.mobile_block_wrap [class*='ss_'],
+.mobile_block_wrap [class*='sc_']{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.mobile_block_wrap .see_block>div>.line_cont{
+    margin: 0 auto;
+}
+.mobile_block_wrap .body_extended .btn_sol{
+    margin-bottom: 0;
+}
+.mobile_block_wrap .sc_order .line_cont{
+    margin: 0 auto 0!important;
+}
+.mobile_block_wrap>.title_page{
+    opacity: 1;
+}
+.mobile_block_wrap>.title_page .bef {
+    color: #ffea00;
+    left: 0;
+    opacity: 1;
+    right: 0;
+}
+.mobile_block_wrap>.title_page .aft {
+    color: #ffea00;
+    right: 0;
+    opacity: 1;
+}
+/* BEGIN animations init */
+.header_circle .circle_line circle,
+[class*="_second"]>div .line_cont circle {
+    stroke-dashoffset: 180;
+    transition: stroke-dashoffset .3s;
+    fill: #fff;
+}
+.center_circle .circle_line:first-child circle,
+[class*="_second"]>div .line_cont:first-child circle {
+    transition-delay: 1.5s;
+}
+.center_circle .circle_line:first-child circle:last-child,
+[class*="_second"]>div .line_cont:first-child .circle_line:first-child circle {
+    transition: .3s;
+    transition-delay: 1.5s;
+    fill: #fff;
+}
+.see_block .center_circle .circle_line:first-child circle:last-child{
+    fill: #eee;
+}
+.see_block .center_circle .circle_line:first-child circle {
+    stroke-dashoffset: 0;
+}
+.header_circle .line_vertic::before,
+[class*="_second"]>div .line_vertic::before {
+    height: 0;
+    transition: .3s;
+    transition-delay: 3.6s;
+}
+.header_circle .center_circle .line_vertic:nth-child(2)::before,
+[class*="_second"]>div .line_cont:first-child .line_vertic::before {
+    transition-delay: 1.8s;
+}
+body .header_circle .line_cont.center_circle .circle_line:nth-child(3) circle:first-child,
+[class*="_second"]>div .line_cont:first-child .circle_line:last-child circle {
+    transition-delay: 2.1s;
+}
+.see_block .header_circle .line_vertic::before,
+[class*="_second"].see_block>div .line_vertic::before {
+    height: 100%;
+}
+.header_circle::before,
+.header_circle::after,
+[class*="_second"]>div .content_service+.line_cont .circle_line:first-child circle,
+[class*="_second"]>div .content_service+.line_cont .line_vertic::before{
+    transition-delay: 2.4s;
+}
+.see_block .header_circle::before,
+.see_block .header_circle::after {
+    width: 49%;
+}
+.header_circle .line_cont:first-child .circle_line circle:first-child,
+.header_circle .line_cont:last-child .circle_line circle:first-child,
+[class*="_second"]>div .content_service+.line_cont .circle_line:last-child circle{
+    transition-delay: 2.8s;
+}
+.see_block .header_circle .line_cont:first-child .circle_line:first-child circle:first-child,
+.see_block .header_circle .line_cont:last-child .circle_line:first-child circle:first-child,
+.see_block .center_circle .circle_line:nth-child(3) circle:first-child,
+[class*="_second"].see_block>div .line_cont .circle_line circle{
+    stroke-dashoffset: 0;
+}
+.header_circle {
+    transition-delay: 3.1s;
+}
+.header_circle .line_cont:first-child .btn_sol {
+    left: -54px;
+}
+.header_circle .line_cont:nth-child(2) .btn_sol {
+    left: -79px;
+}
+.header_circle .line_cont:last-child .btn_sol {
+    left: -68px;
+}
+.see_block .header_circle {
+    width: 80%;
+}
+.header_circle .line_cont .circle_line:nth-child(3) circle:first-child,
+.header_circle .center_circle .circle_line:nth-child(5) circle:first-child {
+    transition-delay: 4s;
+}
+.see_block .header_circle .line_cont .circle_line:nth-child(3) circle:first-child,
+.see_block .header_circle .center_circle .circle_line:nth-child(5) circle:first-child {
+    stroke-dashoffset: 0;
+}
+.see_block .header_circle .btn_sol {
+    opacity: 1;
+}
+.see_block .header_circle .line_cont.active_service .circle_line circle:last-child {
+    stroke-dashoffset: 0;
+    fill: #eee;
+
+}
+/*----------------------------*/
+
+.body_circle .circle_line circle {
+    stroke-dashoffset: 180;
+    fill: #fff;
+    transition: .3s;
+}
+.border_top .circle_line:last-child circle {
+    transition-delay: .9s
+}
+.body_circle.see_block .border_top .circle_line circle {
+    stroke-dashoffset: 0;
+}
+.border_top .line_vertic::before {
+    height: 0;
+    transition: height .4s;
+    transition-delay: .3s
+}
+.body_circle.see_block .border_top .line_vertic::before,
+.body_circle.see_block .line_cont.abso_content .line_vertic::before {
+    height: 100%;
+}
+.body_circle.see_block .body_service::before {
+    width: 6%;
+}
+.selling.body_circle.see_block .body_service::before {
+    width: 50%;
+}
+.first_left_con .circle_line:first-child circle {
+    transition: .3s;
+    transition-delay: 1.4s
+}
+.body_circle.see_block .circle_line circle{
+    stroke-dashoffset: 0;
+}
+.body_circle.see_block .circle_line circle:last-child{
+    fill: #eee;
+}
+.first_left_con .line_vertic::before {
+    height: 0;
+    transition: .4s;
+    transition-delay: 1.7s
+}
+.body_circle.see_block .first_left_con .line_vertic::before {
+    height: 100%;
+}
+.first_left_con .circle_line:last-child circle {
+    transition: .3s;
+    transition-delay: 2.1s
+}
+.body_service::after {
+    width: 0;
+    transition: width .4s;
+    transition-delay: 2.4s
+}
+.body_circle.see_block .body_service::after {
+    width: 100%;
+}
+.selling.body_circle.see_block .body_service::after {
+    width: 50%;
+    left: 0;
+}
+.line_cont.abso_content .circle_line:first-child circle {
+    transition: .3s;
+    transition-delay: 2.8s;
+}
+.line_cont.abso_content .circle_line:last-child circle {
+    transition: .3s;
+    transition-delay: 3.5s;
+}
+.line_cont.abso_content .line_vertic::before {
+    height: 0;
+    transition: height .4s;
+    transition-delay: 3.1s;
+}
+.see_block .more_abs {
+    opacity: 1;
+}
+.promo .content_service {
+    left: -50px;
+    opacity: 0;
+}
+.body_circle.promo.see_block .content_service {
+    left: 0;
+    opacity: 1;
+}
+.content_service {
+    top: -50px;
+    opacity: 0;
+}
+.see_block .content_service {
+    top: 0;
+    opacity: 1;
+}
+.complex .content_service {
+    right: -50px;
+    opacity: 0;
+}
+.body_circle.complex.see_block .content_service {
+    right: 0;
+    opacity: 1;
+}
+/* AND animations init */
