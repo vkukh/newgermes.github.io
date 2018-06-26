@@ -1,6 +1,6 @@
 'use strict';
 (function() {
-<<<<<<< HEAD
+
 	const vocabulary = {
 	    first: 'Hello',
 	    second: 'world!',
@@ -10,7 +10,7 @@
 	if (vocabulary.first.length > 3) {
 	    console.log(`${vocabulary.first} ${vocabulary.second}`);
 	}
-=======
+
     const vocabulary = {
         first: 'Hello',
         second: 'world!'
@@ -28,12 +28,7 @@
     } else {
 	console.log(`${vocabularyEnglish.first} ${vocabularyEnglish.happy}`);
     }
-<<<<<<< HEAD
-
->>>>>>> 39aa69c... add inheritance
-=======
-    
     idT = setInterval(() => console.log(vocabulary.first), 1000);
     setTimeout(() => clearInterval(idT), 10000);
->>>>>>> 23867f2... add timers
+
 } ());
