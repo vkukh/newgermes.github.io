@@ -1,19 +1,9 @@
 'use strict';
 (function() {
-
-	const vocabulary = {
-	    first: 'Hello',
-	    second: 'world!',
-	    third: 'Hi!'
-	};
-	
-	if (vocabulary.first.length > 3) {
-	    console.log(`${vocabulary.first} ${vocabulary.second}`);
-	}
-
     const vocabulary = {
         first: 'Hello',
-        second: 'world!'
+        second: 'world!',
+        third: 'Hi!'
     };
 
     const vocabularyEnglish = Object.create(vocabulary);
@@ -26,9 +16,9 @@
     if (vocabulary.first.length > 3) {
         console.log(`${vocabulary.first} ${vocabulary.second}`);
     } else {
-	console.log(`${vocabularyEnglish.first} ${vocabularyEnglish.happy}`);
+        console.log(`${vocabularyEnglish.first} ${vocabularyEnglish.happy}`);
     }
+
     idT = setInterval(() => console.log(vocabulary.first), 1000);
     setTimeout(() => clearInterval(idT), 10000);
-
-} ());
+}());
