@@ -5,7 +5,7 @@
         second: 'world!',
         third: 'Hi!'
     };
-
+    const a = 2;
     const vocabularyEnglish = Object.create(vocabulary);
     let idT = null;
 
@@ -14,7 +14,7 @@
     vocabularyEnglish.sad = 'fail';
 
     if (vocabulary.first.length > 3) {
-        console.log(`${vocabulary.first} ${vocabulary.second}`);
+        console.log(`${vocabulary.first} ${vocabulary.second} ${a}`);
     } else {
         console.log(`${vocabularyEnglish.first} ${vocabularyEnglish.happy}`);
     }
