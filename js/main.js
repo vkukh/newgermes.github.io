@@ -1,10 +1,9 @@
 'use strict';
 (function() {
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
-    
         // The data for our dataset
         data: {
             labels: ["Март", "Апрель 46%", "Май 109%", "Июнь 236%", "Июль 96%", "Август 51%", "Сентябрь 19%", "Октябрь 40%", "Ноябрь 19%", "Декабрь 5%"],
@@ -25,13 +24,12 @@
                 fill: false
             }]
         },
-    
         // Configuration options go here
         options: {
             responsive: true,
-            title:{
-                display:true,
-                text:'Показатели роста посещаемости c 03.2017 по 12.2017'
+            title: {
+                display: true,
+                text: 'Показатели роста посещаемости c 03.2017 по 12.2017'
             },
             tooltips: {
                 mode: 'index',
@@ -44,4 +42,4 @@
 
         }
     });
-} ());
+}());

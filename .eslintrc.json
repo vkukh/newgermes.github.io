@@ -6,7 +6,8 @@
 	},
 	"extends": "eslint:recommended",
 	"globals": {
-		"api": false
+		"api": false,
+		"Chart": true
 	},
 	"rules": {
 		"indent": [
