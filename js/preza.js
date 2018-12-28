@@ -1,11 +1,12 @@
+'use strict';
 (function() {
     const STOP = 333000; // сумма вложений
     const app = document.querySelector('#app');
     const input = document.querySelector('input');
 
-    let etalon = 85000; // выход в ноль
+    const etalon = 85000; // выход в ноль
     let newTraffic = 85000;
-    let delta = 10; // 10%
+    // const delta = 10; // 10%
     let re = 0;
     let sum = 0;
     let month = 1;
@@ -18,9 +19,15 @@
             newTraffic += newTraffic * delta;
             re = newTraffic * 22500 / etalon - 22500;
             sum += re;
-    
-            res += `<p><b>Пользователей в месяц ${month}:</b> ${newTraffic.toFixed(0) * 30} пользователей; <b>Месячная прибыль:</b> ${re.toFixed(0)} $; <b>Чистая суммарная прибыль:</b> ${sum.toFixed(0)} $</p>`;
-            // console.log(`Месяц ${month}: ${newTraffic.toFixed(0)} пользователей; Месячная прибыль: ${re.toFixed(0)} $; Суммарная прибыль: ${sum.toFixed(0)} $`);
+            res += `<p><b>Пользователей в месяц ${month}:
+                        </b> ${newTraffic.toFixed(0) * 30} пользователей; 
+                                <b>Месячная прибыль:</b> ${re.toFixed(0)} $; 
+                                <b>Чистая суммарная прибыль:
+                                </b> ${sum.toFixed(0)} $</p>`;
+            /* console.log(`Месяц ${month}:
+                    ${newTraffic.toFixed(0)} пользователей;
+                    Месячная прибыль: ${re.toFixed(0)} $;
+                    Суммарная прибыль: ${sum.toFixed(0)} $`);*/
             month++;
         }
         newTraffic = 85000;
@@ -36,4 +43,4 @@
         console.log(input.value);
         app.innerHTML = getRes(input.value / 100);
     });
-} ());
+}());
